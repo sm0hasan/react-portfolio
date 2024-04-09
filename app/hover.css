@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background {
+    cursor: pointer;
+    position: relative;
+  
+    /* Hover effect */
+    &:hover::before {
+      opacity: 1;
+      pointer-events: none; 
+    }
+  
+    &::before,
+    &::after {
+        content: '';
+        pointer-events: none; 
+        height: 100%;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        transition: opacity 500ms;
+        width: 100%;
+    }
+  
+    &::before {
+        background: radial-gradient(
+            400px circle at var(--mouse-x) var(--mouse-y),
+            rgba(24, 50, 148, 0.425),
+            transparent 90%
+        );
+    }
+  
+    &::after {
+        background: radial-gradient(
+            600px circle at var(--mouse-x) var(--mouse-y),
+            rgb(41, 48, 177, 0.8),
+            transparent 90%
+        );
+        z-index: 1;
+    }
+
+}
+
+
+  
