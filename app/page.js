@@ -5,6 +5,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import "./hover.css";
 import "./globals.css";
+import RedditImage from "../public/images/reddit2.png";
 
 import { Inter } from "next/font/google";
 const inter = Inter({
@@ -49,7 +50,7 @@ export default function Home() {
       position: 'Software Developer',
       company: 'Semper8',
       link: 'https://semper8.com/',
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus.",
+      description: "Developed and styled interactive components for the Unorbi social media app, including critical components like attaching external content while messaging other parties. Conducted rigorous testing on iOS and Android devices, gathering feedback to identify pain points and areas for improvement on the design to enhance usability.",
       skills: [
         "React Native",
         "Javascript",
@@ -61,7 +62,7 @@ export default function Home() {
       position: 'Software Developer',
       company: 'Lawbrokr',
       link: 'https://www.lawbrokr.com/',
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus.",
+      description: "Revamped the entire application's front-end, translating designs into user-friendly interfaces using Tailwind, HTML, CSS, JavaScript, and Ruby. Architected the back-end model and controller to seamlessly integrate data into the front-end, utilizing Chart.js for dynamic presentation of real-time data visualization.",
       skills: [
         "Ruby on Rails",
         "SaaS",
@@ -77,7 +78,7 @@ export default function Home() {
       position: 'Product Manager',
       company: 'Purolator',
       link: 'https://www.purolator.com/en',
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus.",
+      description: "Designed, launched, and managed new products, including an address book application. Facilitated cross-functional teams, including Billing, ERP, Marketing, and Communication \& Technology Support departments, to develop and implement retail requirements for corporate and agent stores as well as lead a digitization proposal to reduce paper usage and costs, which improved customer experience and streamlined processes for retail staff and employees.",
       skills: [
         "Process Improvement",
         "Microsoft Excel",
@@ -93,7 +94,7 @@ export default function Home() {
       position: 'CI Infrastructure Intern',
       company: 'Environment and Climate Change Canada',
       link: 'https://www.canada.ca/en/environment-climate-change.html',
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus.",
+      description: "Established a continuous integration infrastructure for the NEMO prediction model using GitLab CI and parallel programs in a high performance computing environment with Linux and Bash. Implemented features like scheduling Cron jobs and proactively identified/resolved pipeline, environment, setup, and code issues through testing and troubleshooting, enhancing system reliability and user experience in the long term.",
       skills: [
         "Git",
         "Linux",
@@ -106,7 +107,7 @@ export default function Home() {
       position: 'Customer Success Support',
       company: 'FSET',
       link: 'https://fset.inc/',
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus.",
+      description: "Composed a document library, technical and non-technical for client and internal facing. Generated analytics for each account to address predominant issues and trend analysis as quarterly reports, increasing ticket completion by 5%. Collaborated with IT Services, Finance \& Operations, and other cross functional teams to address security issues.",
       skills: [
         "Project Planning and Coordination",
         "Analytics",
@@ -129,7 +130,8 @@ export default function Home() {
         "Ruby",
         "Javascript",
         "Tailwind CSS",
-      ]
+      ],
+      image: RedditImage,
     },
     {
       title: 'Reddit-ish',
@@ -140,27 +142,29 @@ export default function Home() {
         "Ruby",
         "Javascript",
         "Tailwind CSS",
-      ]
+      ],
+      image: RedditImage,
     },
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredProjectIndex, setHoveredProjectIndex] = useState(null);
 
   return (
     <main
-      className="bg-slate-900 flex justify-center h-full w-auto background"
+      className="bg-[#060a11] flex justify-center h-full w-auto background"
       style={{
         "--mouse-x": `${mousePosition.x}px`,
         "--mouse-y": `${mousePosition.y}px`,
       }}
     >
-      <section className="sticky left-0 top-0 h-screen w-2 bg-slate-700 vanish">
-      <p class="loop-text">Open To Work — Fall 2024 |</p>
-      <p class="loop-text">Open To Work — Fall 2024 |</p>
-      <p class="loop-text">Open To Work — Fall 2024 |</p>
-      <p class="loop-text">Open To Work — Fall 2024 |</p>
-      <p class="loop-text">Open To Work — Fall 2024 |</p>
-      <p class="loop-text">Open To Work — Fall 2024 |</p>
+      <section className="sticky left-0 top-0 h-screen w-2 bg-[#d5bdaf] vanish">
+        <p class="loop-text">Open To Work — Fall 2024 |</p>
+        <p class="loop-text">Open To Work — Fall 2024 |</p>
+        <p class="loop-text">Open To Work — Fall 2024 |</p>
+        <p class="loop-text">Open To Work — Fall 2024 |</p>
+        <p class="loop-text">Open To Work — Fall 2024 |</p>
+        <p class="loop-text">Open To Work — Fall 2024 |</p>
       </section >
       <div className="md:flex md:flex-row md:justify-end w-[100%] lg:w-[78rem] h-full py-12 px-10 z-10">
         
@@ -180,8 +184,7 @@ export default function Home() {
             <h3
               className={`${inter.className} text-base mt-3 text-slate-400 max-w-xs`}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
+              Welcome to my website! I use this to show some of my projects off as well as my past experiences.
             </h3>
             <div className="mt-20 flex flex-col gap-5 hide">
               <a href="#about" onClick={() => handleLinkClick("about")}>
@@ -207,14 +210,14 @@ export default function Home() {
             </div>
           </div>
           <div className="py-8 text-4xl flex gap-5 text-slate-400 shift">
-            <a href="https://github.com/sm0hasan">
+            <a href="https://github.com/sm0hasan" target="_blank">
               <AiFillGithub className="hover:text-slate-200"/>
             </a>
-            <a href="https://www.linkedin.com/in/syed-mustafa-hasan/">
+            <a href="https://www.linkedin.com/in/syed-mustafa-hasan/" target="_blank">
               <AiFillLinkedin className="hover:text-slate-200"/>
             </a>
-            <a href="#" target="_blank" className="flex hover:text-teal-300">
-              <div className={`${inter.className} text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-teal-300 hover:border-teal-300`}>
+            <a href="#" target="_blank" className="flex">
+              <div className={`${inter.className} text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
                 Resume
               </div>
             </a>
@@ -233,18 +236,18 @@ export default function Home() {
             </div>
             <div className="px-2 pb-4">
               <p className={`${inter.className} text-base mt-3 text-slate-400 pb-1`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <a className={`${interMedium.className} text-slate-200 hover:text-teal-300`}>
+                My first take at engineering was in elementary school, where I somehow landed myself in the Vex/Robotics club. Although my memory is faint of it, I know I loved the building, the creation of weird/unique solutions to problems, and having fun with my teammates. Fast-forward to today, and I have had the opportunity of
+                <span className={`${interMedium.className} text-slate-200`}> building software</span>, <span className={`${interMedium.className} text-slate-200`}>designing products</span>, <span className={`${interMedium.className} text-slate-200`}>creating a pipeline</span>, a <span className={`${interMedium.className} text-slate-200`}>documentation library</span>, and <span className={`${interMedium.className} text-slate-200`}>assisting customers</span>.
+                
+                {/* <a className={`${interMedium.className} text-slate-200 hover:text-[#a8dadc]`}>
                   incididunt
-                </a> ut labore et dolore magna aliqua.
+                </a> */}
               </p>
               <p className={`${inter.className} text-base mt-3 text-slate-400 pb-1`}>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                <a className={`${interMedium.className} text-slate-200 hover:text-teal-300`}>
-                  {' '}commodo
-                </a> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                As of now, I am cuurently studying <span className={`${interMedium.className} text-slate-200`}>Computer Engineering at the University of Waterloo</span> where I have had the privelege of learning a variety of topics, like <span className={`${interMedium.className} text-slate-200`}>Computer Networks</span>, <span className={`${interMedium.className} text-slate-200`}>Database Systems</span>, and <span className={`${interMedium.className} text-slate-200`}>Real-time operating Systems</span>. My main focus is developing my current skillset and learning new skills to create unqie projects that might end up solving a problem for someone out there.
               </p>
               <p className={`${inter.className} text-base mt-3 text-slate-400 pb-1`}>
-                Vitae justo eget magna fermentum. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Hendrerit dolor magna eget est lorem. Tristique et egestas quis ipsum suspendisse.
+                When I'm not at the computer, I'm usually playing basketball, reading, hanging out with my family, or finding new tools to make my life easier.
               </p>
             </div>
           </div>
@@ -272,7 +275,7 @@ export default function Home() {
                     {item.date}
                   </h5>
                   <div>
-                    <a href={item.link} target="_blank" className="outerDiv w-fit flex text-slate-200 hover:text-teal-300">
+                    <a href={item.link} target="_blank" className="outerDiv w-fit flex text-slate-200 hover:text-[#a8dadc]">
                       <h4 className={`${interMedium.className} dateCard mt-2 text-[0.93rem] tracking-wide`}>
                         <span className="uppercase">{item.position}</span> · {item.company}
                       </h4>
@@ -282,7 +285,7 @@ export default function Home() {
                     <p className={`${inter.className} text-sm mt-2 text-slate-400 pb-1`}>{item.description}</p>
                     <div className="py-1 flex flex-wrap">
                       {item.skills.map((skills, index) => (
-                        <div className={`${inter.className} text-xs text-teal-300 px-3 py-1 rounded-full bg-teal-950 min-w-fit mr-1 mb-1`}>
+                        <div className={`${inter.className} text-xs text-[#fff] px-3 py-1 rounded-full bg-[#58514d] min-w-fit mr-1 mb-1`}>
                           {skills}
                         </div>
                       ))}
@@ -303,21 +306,43 @@ export default function Home() {
             </div>
             <div className="px-2">
               {projects.map((item, index) => (
-                <div className="pb-6">
-                  <a href={item.link} target="_blank" className="outerDiv w-fit flex text-slate-200 hover:text-teal-300">
-                    <h4 className={`${interMedium.className} mt-2 text-[0.93rem] tracking-wide uppercase`}>
-                      {item.title}
-                    </h4>
-                    <BsArrowUpRight className="mt-2 ml-1 innerDiv" />
-                  </a>
-                  <p className={`${inter.className} text-sm mt-2 text-slate-400 pb-1`}>{item.description}</p>
-                  <div className="py-1 flex flex-wrap">
-                    {item.stack.map((item, index) => (
-                      <div className={`${inter.className} text-xs text-teal-300 px-3 py-1 rounded-full bg-teal-950 min-w-fit mr-1 mb-1`}>
-                        {item}
-                      </div>
-                    ))}
+                // <div className="pb-6">
+                <div
+                  className={`projectContainer md:mb-3 md:pt-3 md:pb-2 md:pl-6 md:pr-5 md:rounded-lg mb-6 md:hover:shadow-2xl md:hover:bg-slate-800/50 ${
+                    hoveredProjectIndex !== null && hoveredProjectIndex !== index
+                      ? "opacity-50"
+                      : ""
+                  }`}
+                  onMouseEnter={() => setHoveredProjectIndex(index)}
+                  onMouseLeave={() => setHoveredProjectIndex(null)}
+                >
+                  <div className="mt-2">
+                    <a href={item.link} target="_blank" className="outerDiv w-fit flex text-slate-200 hover:text-[#a8dadc]">
+                      <h4 className={`${interMedium.className} text-[0.93rem] tracking-wide uppercase`}>
+                        {item.title}
+                      </h4>
+                      <BsArrowUpRight className="ml-1 innerDiv" />
+                    </a>
+                    <p className={`${inter.className} text-sm mt-2 text-slate-400 pb-1`}>{item.description}</p>
+                    <div className="py-1 flex flex-wrap">
+                      {item.stack.map((item, index) => (
+                        <div className={`${inter.className} text-xs text-[#fff] px-3 py-1 rounded-full bg-[#58514d] min-w-fit mr-1 mb-1`}>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
                   </div>
+                  {/* <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[7rem] bg-white border rounded-md mt-3 mr-4"> */}
+                  <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[8rem] bg-white border rounded-md mt-3 mr-4">
+                    <Image
+                      src={item.image}
+                      width={1200}
+                      height={300}
+                      alt=":("
+                      style={{padding: 1}}
+                    />  
+                  </div>
+                  
                 </div>
               ))}
 
@@ -328,6 +353,20 @@ export default function Home() {
           <div id="contact">
 
           </div>
+
+
+          {/* Footer */}
+          <div className="">
+            <div>
+              <p className={`${inter.className} text-sm mt-12 text-slate-400 pb-1`}>I'm interested in developing myself further, free to
+                <a href={'#contact'} target="_blank" className={`${interMedium.className} text-slate-200 hover:text-[#a8dadc]`}> contact me </a>
+                if you want to work on a project together!</p>
+            </div>
+          </div>
+
+            
+
+          
         </section>
       </div>
     </main>
