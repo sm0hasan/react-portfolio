@@ -6,6 +6,8 @@
   import "./hover.css";
   import "./globals.css";
   import RedditImage from "../public/images/reddit2.png";
+  import Link from 'next/link';
+
 
   import { Inter } from "next/font/google";
   const inter = Inter({
@@ -237,11 +239,16 @@
               <a href="mailto:sm8hasan@uwaterloo.ca" target="_blank">
                 <AiOutlineMail className="hover:text-slate-200"/>
               </a>
-              <a href={'public/Resume_Fall24.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" download>
+              <a href={'/ResumeFall24.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" download>
                 <div className={`${inter.className} text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
                   Resume
                 </div>
               </a>
+              <Link href={'/ResumeFall24.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" aria-label="Downlod Resume">
+                <div className={`${inter.className} text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
+                  Resume
+                </div>
+              </Link>
               
             </div>
           </section>
