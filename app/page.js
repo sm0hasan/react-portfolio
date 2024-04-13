@@ -237,7 +237,7 @@
               <a href="mailto:sm8hasan@uwaterloo.ca" target="_blank">
                 <AiOutlineMail className="hover:text-slate-200"/>
               </a>
-              <a href={'../public/Resume_Fall24.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" download>
+              <a href={'/Resume_Fall24.pdf'} target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" download>
                 <div className={`${inter.className} text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
                   Resume
                 </div>
