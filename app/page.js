@@ -268,7 +268,7 @@
                   As of now, I am cuurently studying <span className={`${interMedium.className} text-slate-200`}>Computer Engineering at the University of Waterloo</span> where I have had the privelege of learning a variety of topics, like <span className={`${interMedium.className} text-slate-200`}>Computer Networks</span>, <span className={`${interMedium.className} text-slate-200`}>Database Systems</span>, and <span className={`${interMedium.className} text-slate-200`}>Real-time operating Systems</span>. My main focus is developing my current skillset and learning new skills to create unqie projects that might end up solving a problem for someone out there.
                 </p>
                 <p className={`${inter.className} text-base mt-3 text-slate-400 pb-1`}>
-                  When I'm not at the computer, I'm usually playing basketball, reading, hanging out with my family, or finding new tools to make my life easier.
+                  When I&apos;m not at the computer, I&apos;m usually playing basketball, reading, hanging out with my family, or finding new tools to make my life easier.
                 </p>
               </div>
             </div>
@@ -380,7 +380,7 @@
             {/* Footer */}
             <div className="">
               <div>
-                <p className={`${inter.className} text-sm mt-12 text-slate-400 pb-1`}>I'm interested in developing myself further, free to
+                <p className={`${inter.className} text-sm mt-12 text-slate-400 pb-1`}>I&apos;m interested in developing myself further, free to
                   <a href="mailto:sm8hasan@uwaterloo.ca" target="_blank" className={`${interMedium.className} text-slate-200 hover:text-[#a8dadc]`}> contact me </a>
                   if you want to work on a project together!</p>
               </div>
