@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@media (min-width: 768px) {
+    
 .background {
     cursor: pointer;
     position: relative;
@@ -43,6 +46,8 @@
     }
 
 }
+}
+
 
 
   
