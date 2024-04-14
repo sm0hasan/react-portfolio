@@ -208,22 +208,22 @@
               </h3>
               <div className="mt-20 flex flex-col gap-5 hide">
                 <a href="#about" onClick={() => handleLinkClick("about")}>
-                  <div className={`${interMedium.className} ${chosenLink === "about" ? "chosenLink" : ""} w-fit subLink text-xs uppercase tracking-widest text-slate-200`}>
+                  <div className={`${interMedium.className} ${chosenLink === "about" ? "chosenLink" : ""} w-fit flex shrink subLink text-xs uppercase tracking-widest text-slate-200`}>
                     About
                   </div>
                 </a>
                 <a href="#experience" onClick={() => handleLinkClick("experience")}>
-                  <div className={`${interMedium.className} ${chosenLink === "experience" ? "chosenLink" : ""} w-fit subLink text-xs uppercase tracking-widest text-slate-200`}>
+                  <div className={`${interMedium.className} ${chosenLink === "experience" ? "chosenLink" : ""} w-fit flex shrink subLink text-xs uppercase tracking-widest text-slate-200`}>
                     Experience
                   </div>
                 </a>
                 <a href="#projects" onClick={() => handleLinkClick("projects")}>
-                  <div className={`${interMedium.className} ${chosenLink === "projects" ? "chosenLink" : ""} w-fit subLink text-xs uppercase tracking-widest text-slate-200`}>
+                  <div className={`${interMedium.className} ${chosenLink === "projects" ? "chosenLink" : ""} w-fit flex shrink subLink text-xs uppercase tracking-widest text-slate-200`}>
                     Projects
                   </div>
                 </a>
                 <a href="#contact" onClick={() => handleLinkClick("contact")}>
-                  <div className={`${interMedium.className} ${chosenLink === "contact" ? "chosenLink" : ""} w-fit subLink text-xs uppercase tracking-widest text-slate-200`}>
+                  <div className={`${interMedium.className} ${chosenLink === "contact" ? "chosenLink" : ""} w-fit flex shrink subLink text-xs uppercase tracking-widest text-slate-200`}>
                     Contact
                   </div>
                 </a>
@@ -259,7 +259,7 @@
               </div>
               <div className="px-2 pb-4">
                 <p className={`${inter.className} text-base mt-3 text-slate-400 pb-1`}>
-                  My first take at engineering was in elementary school, where I somehow landed myself in the Vex/Robotics club. Although my memory is faint of it, I know I loved the building, the creation of weird/unique solutions to problems, and having fun with my teammates. Fast-forward to today, and I have had the opportunity of
+                  My first take at engineering was in elementary school, where I somehow landed myself in the Vex/Lego Robotics club. Although my memory is faint of it, I know I loved the building, the creation of weird/unique solutions to problems, and having fun with my teammates. Fast-forward to today, and I have had the opportunity of
                   <span className={`${interMedium.className} text-slate-200`}> building software</span>, <span className={`${interMedium.className} text-slate-200`}>designing products</span>, <span className={`${interMedium.className} text-slate-200`}>creating a pipeline</span>, a <span className={`${interMedium.className} text-slate-200`}>documentation library</span>, and <span className={`${interMedium.className} text-slate-200`}>assisting customers</span>.
                   
                   {/* <a className={`${interMedium.className} text-slate-200 hover:text-[#a8dadc]`}>
