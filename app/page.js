@@ -192,7 +192,7 @@
           <section className=" static md:sticky md:top-14 md:z-40 md:w-1/2 py-8 px-12 flex flex-col justify-start md:justify-between md:h-[90vh] sm:mr-10">
             <div className="shift">
               <h1
-                className={`${interBold.className} text-5xl text-slate-200 text-nowrap w-fit tracking-tight name px-2`}
+                className={`${interBold.className} md:text-5xl text-2xl text-slate-200 text-nowrap w-fit tracking-tight name px-2`}
               >
                 Mustafa Hasan
               </h1>
@@ -229,7 +229,7 @@
                 </a>
               </div>
             </div>
-            <div className="py-8 text-4xl flex gap-5 text-slate-400 shift">
+            <div className="py-8 md:text-4xl text-3xl flex gap-5 text-slate-400 shift flex-wrap">
               <a href="https://github.com/sm0hasan" target="_blank">
                 <AiFillGithub className="hover:text-slate-200"/>
               </a>
@@ -240,7 +240,7 @@
                 <AiOutlineMail className="hover:text-slate-200"/>
               </a>
               <Link href={'/ResumeFall24.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" aria-label="Downlod Resume">
-                <div className={`${inter.className} text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
+                <div className={`${inter.className} md:text-base text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
                   Resume
                 </div>
               </Link>
