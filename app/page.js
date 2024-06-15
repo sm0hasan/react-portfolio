@@ -6,6 +6,8 @@
   import "./hover.css";
   import "./globals.css";
   import RedditImage from "../public/images/reddit2.png";
+  import BoxOffice from "../public/images/boxoffice.png";
+  import Radar from "../public/images/radar.png";
   import Link from 'next/link';
 
 
@@ -70,7 +72,7 @@
         position: 'Software Developer',
         company: 'Semper8',
         link: 'https://semper8.com/',
-        description: "Developed and styled interactive components for the Unorbi social media app, including critical components like attaching external content while messaging other parties. Conducted rigorous testing on iOS and Android devices, gathering feedback to identify pain points and areas for improvement on the design to enhance usability.",
+        description: "Developed and styled interactive components for a social media app, including critical components like attaching external content while messaging other parties. Conducted rigorous testing on iOS and Android devices, gathering feedback to identify pain points and areas for improvement on the design to enhance usability.",
         skills: [
           "React Native",
           "Javascript",
@@ -153,18 +155,45 @@
         ],
         image: RedditImage,
       },
-      // {
-      //   title: 'Reddit-ish',
-      //   link: 'https://github.com/sm0hasan/reddit-blogging-website',
-      //   description: "Developed a feature-rich blog platform with user authentication via Devise, enabling seamless registration, post creation/editing, image uploads, and interactive features like voting, commenting, and searching. Utilized Tailwind for front-end design, integrated Pagy for pagination, and implemented custom CSS to ensure the development of a user-friendly, modern, and responsive blog interface within an MVC framework",
-      //   stack: [
-      //     "Ruby on Rails",
-      //     "Ruby",
-      //     "Javascript",
-      //     "Tailwind CSS",
-      //   ],
-      //   image: RedditImage,
-      // },
+      {
+        title: 'Movies Database',
+        link: 'https://github.com/sm0hasan/movies-database',
+        description: "Architected a MySQL database to hold movie information that can be used for data mining and client applications. Developed a GUI for a client application using Python to allow users to carry out available queries.",
+        stack: [
+          "Python",
+          "MySQL",
+        ],
+        image: BoxOffice,
+      },
+      {
+        title: 'TCP/UDP Network Simulation',
+        link: 'https://github.com/sm0hasan/tcp-udp-networks',
+        description: "Simulated TCP and UDP networks to optimize performance, evaluating latency, throughput, and reliability metrics. Integrated Postman for protocol testing and analysis, ensuring scalability and robustness through comprehensive API endpoint testing and load testing.",
+        stack: [
+          "Python",
+          "Postman",
+        ],
+        image: null,
+      },
+      {
+        title: 'Real-time Operating System (RTX)',
+        link: null,
+        description: "Designed and implemented an RTX on Intel DE1-SoC board with a multi-programming environment for dynamic memory management, inter-task communications, and console I/O. Developed a scheduling algorithm for dynamic task management, supporting task preemption, creation, and deletion through an implemented version of malloc \& dealloc.",
+        stack: [
+          "C",
+        ],
+        image: null,
+      },
+      {
+        title: 'Proximity Radar System',
+        link: null,
+        description: "Built a objection detection system utilizing an ultrasonic radar and STM32CubeIDE in C to scan for obstacles and provide various measurements.",
+        stack: [
+          "C",
+          "PCB Designing"
+        ],
+        image: Radar,
+      },
     ];
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -197,9 +226,14 @@
                 Mustafa Hasan
               </h1>
               <h2
-                className={`${interMedium.className} text-xl text-slate-200 mt-3 tracking-tight`}
+                className={`${interMedium.className} text-xl text-slate-200 mt-4 mb-1 tracking-tight`}
               >
                 4th Year Computer Engineering
+              </h2>
+              <h2
+                className={`${interMedium.className} text-xl text-slate-200 mt-0 mb-6 tracking-tight`}
+              >
+                University of Waterloo
               </h2>
               <h3
                 className={`${inter.className} text-base mt-3 text-slate-400 max-w-xs`}
@@ -222,11 +256,11 @@
                     Projects
                   </div>
                 </a>
-                <a href="#contact" onClick={() => handleLinkClick("contact")}>
+                {/* <a href="#contact" onClick={() => handleLinkClick("contact")}>
                   <div className={`${interMedium.className} ${chosenLink === "contact" ? "chosenLink" : ""} w-fit flex shrink subLink text-xs uppercase tracking-widest text-slate-200`}>
                     Contact
                   </div>
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="py-8 md:text-4xl text-3xl flex gap-5 text-slate-400 shift flex-wrap">
@@ -239,7 +273,7 @@
               <a href="mailto:sm8hasan@uwaterloo.ca" target="_blank">
                 <AiOutlineMail className="hover:text-slate-200"/>
               </a>
-              <Link href={'/ResumeFall24.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" aria-label="Downlod Resume">
+              <Link href={'/ResumeNew.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" aria-label="Downlod Resume">
                 <div className={`${inter.className} md:text-base text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
                   Resume
                 </div>
@@ -267,7 +301,7 @@
                   </a> */}
                 </p>
                 <p className={`${inter.className} text-base mt-3 text-slate-400 pb-1`}>
-                  As of now, I am cuurently studying <span className={`${interMedium.className} text-slate-200`}>Computer Engineering at the University of Waterloo</span> where I have had the privelege of learning a variety of topics, like <span className={`${interMedium.className} text-slate-200`}>Computer Networks</span>, <span className={`${interMedium.className} text-slate-200`}>Database Systems</span>, and <span className={`${interMedium.className} text-slate-200`}>Real-time operating Systems</span>. My main focus is developing my current skillset and learning new skills to create unqie projects that might end up solving a problem for someone out there.
+                  As of now, I am currently studying <span className={`${interMedium.className} text-slate-200`}>Computer Engineering at the University of Waterloo</span> where I have had the privelege of learning a variety of topics, like <span className={`${interMedium.className} text-slate-200`}>Computer Networks</span>, <span className={`${interMedium.className} text-slate-200`}>Database Systems</span>, and <span className={`${interMedium.className} text-slate-200`}>Real-time operating Systems</span>. My main focus is developing my current skillset and learning new skills to create unqie projects that might end up solving a problem for someone out there.
                 </p>
                 <p className={`${inter.className} text-base mt-3 text-slate-400 pb-1`}>
                   When I&apos;m not at the computer, I&apos;m usually playing basketball, reading, hanging out with my family, or finding new tools to make my life easier.
@@ -342,12 +376,20 @@
                     key={index}
                   >
                     <div className="mt-2">
-                      <a href={item.link} target="_blank" className="outerDiv w-fit flex text-slate-200 hover:text-[#a8dadc]">
-                        <h4 className={`${interMedium.className} text-[0.93rem] tracking-wide uppercase`}>
-                          {item.title}
-                        </h4>
-                        <BsArrowUpRight className="ml-1 innerDiv" />
-                      </a>
+                      { item.link != null ? (
+                        <a href={item.link} target="_blank" className="outerDiv w-fit flex text-slate-200 hover:text-[#a8dadc]">
+                          <h4 className={`${interMedium.className} text-[0.93rem] tracking-wide uppercase`}>
+                            {item.title}
+                          </h4>
+                          <BsArrowUpRight className="ml-1 innerDiv" />
+                        </a>
+                      ) : (
+                        <div className="outerDiv w-fit flex text-slate-200 ">
+                          <h4 className={`${interMedium.className} text-[0.93rem] tracking-wide uppercase`}>
+                            {item.title}
+                          </h4>
+                        </div>
+                      )}
                       <p className={`${inter.className} text-sm mt-2 text-slate-400 pb-1`}>{item.description}</p>
                       <div className="py-1 flex flex-wrap">
                         {item.stack.map((item, index) => (
@@ -358,15 +400,25 @@
                       </div>
                     </div>
                     {/* <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[7rem] bg-white border rounded-md mt-3 mr-4"> */}
-                    <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[8rem] bg-white border rounded-md mt-3 mr-4">
-                      <Image
-                        src={item.image}
-                        width={1200}
-                        height={300}
-                        alt=":("
-                        style={{padding: 1}}
-                      />  
-                    </div>
+                    { item.image != null && (
+                      <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[8rem] bg-white border rounded-md mt-3 mr-4">
+                        <Image
+                          src={item.image}
+                          width={1200}
+                          height={300}
+                          alt=":("
+                          style={{padding: 1}}
+                        />  
+                      </div>
+                    )}
+                    { item.image == null && (
+                      <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[8rem] bg-white border rounded-md mt-3 mr-4 opacity-95">
+                        <div className={`flex justify-center items-center h-full ${interMedium.className} text-xs uppercase tracking-widest text-[#d5bdaf] ml-3`}>
+                          {item.title}
+                        </div>
+                      </div>
+                    )}
+                    
                     
                   </div>
                 ))}
