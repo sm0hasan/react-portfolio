@@ -15,7 +15,3 @@ Developed with Next.js and Tailwind. Deployed with GitHub Page
 - A clean presentation of my expanded resume with relevant links
 - Responsive
 
-## Features to be added
-
- - Add a second page where a list of all my favourite tools/sites can be displayed
- - A 'Contact Me' form
