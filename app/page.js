@@ -6,6 +6,7 @@
   import "./hover.css";
   import "./globals.css";
   import RedditImage from "../public/images/reddit2.png";
+  // import AWSLogo from '../public/images/amazon_web_services_logo.jpg'
   import BoxOffice from "../public/images/boxoffice.png";
   import Radar from "../public/images/radar.png";
   import Link from 'next/link';
@@ -48,22 +49,6 @@
         document.removeEventListener("scroll", handleMouseMove);
       };
     }, []);
-
-    // async function fetchData() {
-    //   try {
-    //     const response = await fetch('/api/fetching');
-        
-    //     const data = await response.json();
-
-    //     console.log('City:', data.city);
-    //     console.log('Country:', data.country);
-    //   } catch (error) {
-    //     console.error('Error fetching data:', error);
-    //   }
-    // }
-
-    // // Call the fetchData function
-    // fetchData();
 
 
     const experience = [
@@ -196,6 +181,17 @@
       },
     ];
 
+    const certification = [
+      {
+        title: 'AWS Certified Cloud Practitioner',
+        org: 'Amazon Web Service (AWS)',
+        issued: 'Dec 2024',
+        expires: 'Dec 2027',
+        link: 'https://www.credly.com/badges/8391c42f-ed2e-43d2-bc9e-416bdf8514c6/linked_in_profile',
+        // image: AWSLogo,
+      },
+    ]
+
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hoveredProjectIndex, setHoveredProjectIndex] = useState(null);
 
@@ -208,12 +204,12 @@
         }}
       >
         <section className="sticky left-0 top-0 h-screen w-2 bg-[#d5bdaf] vanish">
-          <p className="loop-text">Open To Work — Fall 2024 |</p>
-          <p className="loop-text">Open To Work — Fall 2024 |</p>
-          <p className="loop-text">Open To Work — Fall 2024 |</p>
-          <p className="loop-text">Open To Work — Fall 2024 |</p>
-          <p className="loop-text">Open To Work — Fall 2024 |</p>
-          <p className="loop-text">Open To Work — Fall 2024 |</p>
+          <p className="loop-text">Open To Work — New Grad 2025 |</p>
+          <p className="loop-text">Open To Work — New Grad 2025 |</p>
+          <p className="loop-text">Open To Work — New Grad 2025 |</p>
+          <p className="loop-text">Open To Work — New Grad 2025 |</p>
+          <p className="loop-text">Open To Work — New Grad 2025 |</p>
+          <p className="loop-text">Open To Work — New Grad 2025 |</p>
         </section >
         <div className="md:flex md:flex-row md:justify-end w-[100%] lg:w-[78rem] h-full z-10">
           
@@ -256,11 +252,11 @@
                     Projects
                   </div>
                 </a>
-                {/* <a href="#contact" onClick={() => handleLinkClick("contact")}>
-                  <div className={`${interMedium.className} ${chosenLink === "contact" ? "chosenLink" : ""} w-fit flex shrink subLink text-xs uppercase tracking-widest text-slate-200`}>
-                    Contact
+                <a href="#cert" onClick={() => handleLinkClick("cert")}>
+                  <div className={`${interMedium.className} ${chosenLink === "cert" ? "chosenLink" : ""} w-fit flex shrink subLink text-xs uppercase tracking-widest text-slate-200`}>
+                    Certs
                   </div>
-                </a> */}
+                </a>
               </div>
             </div>
             <div className="py-8 md:text-4xl text-3xl flex gap-5 text-slate-400 shift flex-wrap">
@@ -273,7 +269,7 @@
               <a href="mailto:sm8hasan@uwaterloo.ca" target="_blank">
                 <AiOutlineMail className="hover:text-slate-200"/>
               </a>
-              <Link href={'/ResumeNew.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" aria-label="Downlod Resume">
+              <Link href={'/MustafaResume.pdf'} locale="false" target="_blank" alt="Resume" className="flex" rel="noopener noreferrer" aria-label="Downlod Resume">
                 <div className={`${inter.className} md:text-base text-base border-slate-400 text-slate-400 px-3 border-[3px] flex flex-col justify-center hover:text-[#a8dadc] hover:border-[#a8dadc]`}>
                   Resume
                 </div>
@@ -399,36 +395,60 @@
                         ))}
                       </div>
                     </div>
-                    {/* <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[7rem] bg-white border rounded-md mt-3 mr-4"> */}
-                    { item.image != null && (
-                      <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[8rem] bg-white border rounded-md mt-3 mr-4">
-                        <Image
-                          src={item.image}
-                          width={1200}
-                          height={300}
-                          alt=":("
-                          style={{padding: 1}}
-                        />  
-                      </div>
-                    )}
-                    { item.image == null && (
-                      <div className="md:min-w-[7rem] md:max-w-[7rem] md:h-[5rem] min-w-[11rem] max-w-[11rem] h-[8rem] bg-white border rounded-md mt-3 mr-4 opacity-95">
-                        <div className={`flex justify-center items-center h-full ${interMedium.className} text-xs uppercase tracking-widest text-[#d5bdaf] ml-3`}>
-                          {item.title}
-                        </div>
-                      </div>
-                    )}
-                    
-                    
                   </div>
                 ))}
 
               </div>
             </div>
             
-            {/* Contact form */}
-            <div id="contact">
+            {/* Certification form */}
+            <div className="pb-4" id="cert">
+              <div className="p-2 mb-8 sticky top-0 w-full backdrop-blur">
+                <h3 className={`${interBold.className} text-sm uppercase tracking-widest text-slate-200`}>
+                  Certification
+                </h3>
+              </div>
+              <div className="px-2">
+              {/* title: 'AWS Certified Cloud Practitioner',
+              org: 'Amazon Web Service (AWS)',
+              issued: 'Dec 2024',
+              expires: 'Dec 2027',
+              link: 'https://www.credly.com/badges/8391c42f-ed2e-43d2-bc9e-416bdf8514c6/linked_in_profile',
+              image: AWSLogo, */}
+                {certification.map((item, index) => (
+                  <div
+                    className={`projectContainer items-start flex flex-col md:mb-3 md:pt-3 md:pb-2 md:pl-6 md:pr-5 md:rounded-lg mb-6 md:hover:shadow-2xl md:hover:bg-slate-800/50 ${
+                      hoveredProjectIndex !== null && hoveredProjectIndex !== index
+                        ? "opacity-50"
+                        : ""
+                    }`}
+                    onMouseEnter={() => setHoveredProjectIndex(index)}
+                    onMouseLeave={() => setHoveredProjectIndex(null)}
+                    key={index}
+                  >
+                    <div className="mt-2 flex flex-row-col">
+                      <div className="outerDiv w-fit flex flex-col text-slate-200 self-start">
+                        <a href={item.link} target="_blank" className="outerDiv w-fit flex text-slate-200 hover:text-[#a8dadc]">
+                          <h4 className={`${interMedium.className} text-[0.93rem] tracking-wide uppercase`}>
+                            {item.title}
+                          </h4>
+                          <BsArrowUpRight className="ml-1 innerDiv" />
+                        </a>
+                        <h6 className={`${interMedium.className} text-sm mt-2 tracking-wide`}>
+                          {item.org}
+                        </h6>
+                        <p className={`${inter.className} text-sm mt-2 text-slate-400 pb-1`}>
+                          {"Issued "}
+                          {item.issued}
+                          {"· Expires "}
+                          {item.expires}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
 
+              </div>
             </div>
 
             {/* Footer */}
@@ -439,9 +459,6 @@
                   if you want to work on a project together!</p>
               </div>
             </div>
-
-              
-
             
           </section>
         </div>
