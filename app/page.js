@@ -405,16 +405,10 @@
             <div className="pb-4" id="cert">
               <div className="p-2 mb-8 sticky top-0 w-full backdrop-blur">
                 <h3 className={`${interBold.className} text-sm uppercase tracking-widest text-slate-200`}>
-                  Certification
+                  Certifications
                 </h3>
               </div>
               <div className="px-2">
-              {/* title: 'AWS Certified Cloud Practitioner',
-              org: 'Amazon Web Service (AWS)',
-              issued: 'Dec 2024',
-              expires: 'Dec 2027',
-              link: 'https://www.credly.com/badges/8391c42f-ed2e-43d2-bc9e-416bdf8514c6/linked_in_profile',
-              image: AWSLogo, */}
                 {certification.map((item, index) => (
                   <div
                     className={`projectContainer items-start flex flex-col md:mb-3 md:pt-3 md:pb-2 md:pl-6 md:pr-5 md:rounded-lg mb-6 md:hover:shadow-2xl md:hover:bg-slate-800/50 ${
